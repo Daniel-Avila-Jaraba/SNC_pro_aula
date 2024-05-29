@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro del vehivulo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        form {
+            width: 50%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"],
+        input[type="button"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 48%;
+            margin-right: 2%;
+            margin-top: 5%;
+        }
+
+        input[type="submit"]:hover,
+        input[type="button"]:hover {
+            background-color: #45a049;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Datos de vehiculo</h2>
+    <form action="Data_Perfiles.php" method="POST" onsubmit="return validarFormulario()">
+        <label for="Placa">Placa:</label>
+        <input type="text" id="placa" name="placa" placeholder="EJP000" required>
+
+        <label for="Marca">Marca:</label>
+        <input type="text" id="marca" name="marca" placeholder="Honda " required>
+
+        <label for="Modelo">Modelo:</label>
+        <input type="text" id="modelo" name="modelo" placeholder="Civic" required>
+
+        <div class="button-container">
+            <input type="submit" value="Guardar" >
+            <input type="button" value="Cancelar" onclick="window.location.href='User_page.html';">
+        </div>
+    </form>
+
+    <script>
+        function validarFormulario() {
+            var placa = document.getElementById("placa").value;
+            var marca = document.getElementById("marca").value;
+            var modelo = document.getElementById("modelo").value;
+
+            if (placa === "" || marca === "" || modelo === "") {
+                alert("Por favor, complete todos los campos del formulario.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

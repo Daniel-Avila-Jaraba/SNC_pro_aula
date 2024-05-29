@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Selección de vehiculo</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    
+
+         body {
+           background-image: url('https://cdn.pixabay.com/photo/2021/10/27/03/37/road-6745746_640.jpg');
+           background-repeat: no-repeat;
+           background-attachment: fixed;
+           background-size: cover;
+           background-position: center;
+            } 
+
+        .profile img {
+          cursor: pointer;
+          margin-bottom: 10px;
+           }
+
+        .profile p {
+           margin-top: 10px;
+           }
+
+        .mt-5 {
+           color: white;
+           }
+
+        .col-6 {
+           color: white;
+           }
+
+        #image-preview {
+          max-width: 150px;
+          max-height: 150px;
+          border-radius: 50%;
+           }
+
+
+      
+    </style>
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1 class="mb-4">Elije tu vehiculo</h1>
+        <div class="row justify-content-center">
+            <div class="col-6 col-md-3 profile">
+                <img src="https://via.placeholder.com/150" alt="Agregar Perfil" class="img-fluid rounded-circle" data-toggle="modal" data-target="#profileModal">
+                <p>Agregar vehiculo</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="profileModalLabel">Nuevo vehiculo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="profile-form" action="Base_vehic.php" method="POST" enctype="multipart/form-data">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="profile-name">modelo:</label>
+                            <input type="text" class="form-control" id="profile-name" name="profile-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-image">Imagen del vehiculo:</label>
+                            <input type="file" class="form-control" id="profile-image" name="profile-image" accept="image/*" required>
+                            <img id="image-preview" src="#" alt="Vista previa" class="img-fluid mt-3" style="display: none;">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

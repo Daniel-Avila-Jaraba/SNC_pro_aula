@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Perfil</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1>Crear Perfil</h1>
+        <form action="Perfiles.php" method="POST">
+            <div class="form-group">
+                <fieldset>
+                    <legend>Seleccionar perfil:</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="carro" name="perfiles[]" value="carro">
+                        <label class="form-check-label" for="carro">Carro</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="moto" name="perfiles[]" value="moto">
+                        <label class="form-check-label" for="moto">Moto</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="camion" name="perfiles[]" value="camion">
+                        <label class="form-check-label" for="camion">Camión</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="bus" name="perfiles[]" value="bus">
+                        <label class="form-check-label" for="bus">Bus</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="otro" name="perfiles[]" value="otro">
+                        <label class="form-check-label" for="otro">Otro</label>
+                    </div>
+                </fieldset>
+            </div>
+            <button type="submit" class="btn btn-primary">Crear Perfil</button>
+        </form>
+    </div>
+</body>
+</html>
